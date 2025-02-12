@@ -1,0 +1,21 @@
+<div>
+  <h2>Workout List</h2>
+  <div *ngIf="successMessage" class="alert alert-success">{{ successMessage }}</div>
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  <ul>
+    <li *ngFor="let workout of workouts">
+      <strong>{{ workout.userName }}</strong> - {{ workout.workoutType }} for {{ workout.minutes }} minutes
+    </li>
+          <th class="border px-2 py-1">Minutes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let workout of workouts" class="text-center">
+          <td class="border px-2 py-1">{{ workout.userName }}</td>
+          <td class="border px-2 py-1">{{ workout.workoutType }}</td>
+          <td class="border px-2 py-1">{{ workout.minutes }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
