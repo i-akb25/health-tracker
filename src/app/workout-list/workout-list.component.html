@@ -21,8 +21,6 @@
       <option value="Meditation">Meditation</option>
     </select>
   </div>
-  
-  
 
   <div class="overflow-x-auto">
     <table
@@ -34,6 +32,7 @@
           <th class="p-2 md:p-5 border-b border-gray-600">Workouts</th>
           <th class="p-2 md:p-5 border-b border-gray-600">Number of Workouts</th>
           <th class="p-2 md:p-5 border-b border-gray-600">Total Workout Minutes</th>
+          <th class="p-2 md:p-5 border-b border-gray-600">Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -48,18 +47,17 @@
           <td class="border-b-2 border-gray-500 px-2 md:px-5 py-2 md:py-4">
             {{ getTotalWorkoutMinutes(user) }}
           </td>
+          <td class="border-b-2 border-gray-500 px-2 md:px-5 py-2 md:py-4">
+            <button
+              (click)="navigateToProgress(user)"
+              class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300"
+            >
+              View Workout Progress
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>
-  </div>
-
-  <div class="flex justify-center mt-4">
-    <button
-      (click)="navigateToProgress()"
-      class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300"
-    >
-     Check Progress
-    </button>
   </div>
 
   <div class="mt-8 flex justify-center flex-wrap max-[500px]:flex-col">

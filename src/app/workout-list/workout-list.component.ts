@@ -38,8 +38,8 @@ export class WorkoutListComponent implements OnInit {
     this.applyFilters();
   }
 
-  navigateToProgress() {
-    this.router.navigate(['/workout-progress']); // Navigate to workout progress
+  navigateToProgress(selectedUser: User) {
+    this.router.navigate(['/workout-progress'], { state: { user: selectedUser } }); // Navigate to workout progress with user
   }
 
   loadInitialUsers() {
