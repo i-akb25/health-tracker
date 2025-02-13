@@ -1,0 +1,33 @@
+.workout-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .user.active {
+    background: #ddd;
+    font-weight: bold;
+  }
+  
+  .chart-section {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  

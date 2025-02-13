@@ -1,0 +1,26 @@
+<!-- <p>workout-progress works!</p> -->
+<div class="workout-container">
+    <div class="sidebar">
+      <div
+        *ngFor="let user of users"
+        [class.active]="selectedUser && selectedUser.name === user.name"
+        (click)="selectUser(user)"
+        class="user"
+      >
+        {{ user.name }}
+      </div>
+    </div>
+    <div class="chart-section">
+<h2 *ngIf="selectedUser">{{ selectedUser.name }}'s Workout Progress</h2>
+
+      <div style="display: block;">
+        <canvas *ngIf="selectedUser" baseChart
+          [datasets]="chartData"
+          [labels]="chartLabels"
+          [options]="chartOptions"
+          [legend]="chartLegend"
+          [chartType]="chartType">
+        </canvas>
+      </div>      
+    </div>
+</div>

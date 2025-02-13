@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'; // Import Router
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -29,12 +30,16 @@ export class WorkoutListComponent implements OnInit {
   filterType: string = '';
   itemsPerPageOptions = [5, 10, 15];
 
-  constructor() {}
+  constructor(private router: Router) {} // Inject Router
 
   ngOnInit() {
     this.loadInitialUsers();
     this.loadUsersFromLocalStorage();
     this.applyFilters();
+  }
+
+  navigateToProgress() {
+    this.router.navigate(['/workout-progress']); // Navigate to workout progress
   }
 
   loadInitialUsers() {

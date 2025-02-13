@@ -21,6 +21,8 @@
       <option value="Meditation">Meditation</option>
     </select>
   </div>
+  
+  
 
   <div class="overflow-x-auto">
     <table
@@ -51,13 +53,22 @@
     </table>
   </div>
 
+  <div class="flex justify-center mt-4">
+    <button
+      (click)="navigateToProgress()"
+      class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300"
+    >
+     Check Progress
+    </button>
+  </div>
+
   <div class="mt-8 flex justify-center flex-wrap max-[500px]:flex-col">
     <button
       (click)="goToPage(currentPage - 1)"
       [disabled]="currentPage === 1"
       class="px-3 py-1 mx-1 mb-2 md:mb-0 border border-gray-500 bg-gray-700 text-gray-300 rounded-md cursor-pointer disabled:opacity-50 hover:bg-blue-500 hover:text-white transition duration-300"
     >
-      &lt;&lt; Previous
+      << Previous
     </button>
     <button
       *ngFor="let page of pagesArray"
@@ -73,7 +84,7 @@
       [disabled]="currentPage === pagesArray.length"
       class="px-3 py-1 mx-1 mb-2 md:mb-0 border border-gray-500 bg-gray-700 text-gray-300 rounded-md cursor-pointer disabled:opacity-50 hover:bg-blue-500 hover:text-white transition duration-300"
     >
-      Next &gt;&gt;
+      Next >>
     </button>
 
     <div class="ml-2 min-[800px]mt-2 md:mt-0 max-[500px]:text-center">

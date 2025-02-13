@@ -1,25 +1,38 @@
-# Health Challenge Tracker
+## 🏥 Health Tracker
 
-Health Challenge Tracker is a single-page application (SPA) developed in Angular 17, designed to track user workouts and display them in a user-friendly interface.
+# 📌 Overview
+
+Health Tracker is a Single Page Application (SPA) built using Angular 14+, designed to track user workouts efficiently. Users can input their name, workout type, and workout duration, and the application displays the workout list with search, filtering, and pagination features.
+
+Additionally, charts are included to visually represent the user's workout progress.
+
+🔗 Live Demo: Health Tracker
+📂 GitHub Repository: health-tracker
 
 ## Introduction
 
 Workout Tracker is an Angular application that allows users to log their workouts. Users can input their names, select workout types, and specify workout durations. The application also provides features for searching and filtering workouts, as well as pagination for easy navigation through the list of users.
 
-## Features
+## 🚀 Features
 
-- **Workout Form**: Allows users to input their name, workout type, and workout minutes.
-- **Workout List**: Displays a grid of user workouts with options for search, filtering by workout type, and pagination.
-- **Optional Chart Feature**: Visualizes workout progress using charts.
-- **Responsive Design**: Ensures optimal viewing across a range of devices.
-- **Data Storage**: Stores workout data in local storage.
+✔️ **Add New Users & Workouts** - Input fields for user name, workout type, and workout minutes
+✔️ **User-Friendly Table Display** - Shows all workout records in a structured format
+✔️ **Search Functionality** - Search for a user by name
+✔️ **Filter Workouts** - Filter user data by workout type
+✔️ **Pagination** - Manage and display large datasets efficiently
+✔️ **Data Persistence** - Uses localStorage to store user workouts
+✔️ **Charts for Workout Progress** - Graphical representation of workouts (Bonus Feature)
+✔️ **Tailwind CSS for Styling** - Modern and responsive UI
 
-## Technologies Used
+## 🛠️ Tech Stack
 
-- **Angular 17**: Front-end framework for building robust SPAs.
-- **Tailwind CSS**: Provides utility-first CSS classes for rapid UI development.
-- **ngx-pagination**: Library for implementing pagination in Angular applications.
-- **ng2-charts**: Integration for displaying charts using Chart.js within Angular.
+- **Frontend**: Angular 17+, TypeScript, HTML, SCSS
+- **Styling**: Tailwind CSS
+- **State Management**: Local Storage
+- **UI Components**: Angular Material
+- **Data Visualization**: ng2-charts, Charts.js (Bonus Feature)
+- **Testing**: Jasmine, Karma
+- **Hosting**: Vercel
 
 ## Getting Started
 
@@ -29,22 +42,24 @@ Follow these instructions to get a local copy of the project up and running on y
 
 - Visual Studio Code - Code Editing, Git Bash - Git command line , Node.js and npm installed on your development machine.
 
-### Installation
+### 🔧 Installation & Setup
 
-1. Clone the repository:
+1️⃣. Clone the repository:
 
    ```
    https://github.com/i-akb25/health-tracker.git
    cd health-tracker
    ```
 
-2. Install dependencies:
+2️⃣. Install dependencies:
    `npm install`
 
 ### Development Server
 
 - Run the application locally:
   `ng serve`
+
+🚀 Open the browser and visit http://localhost:4200/
 
 ### Build
 
@@ -77,9 +92,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Development server
 
 - I have Deploy the application on a hosting platform like:
-- 🌎 https://health-tracker-gold.vercel.app/workout-form
+- 🌎 https://health-tracker-gold.vercel.app/
 
-- You can also Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 📜 Assumptions
+The app initializes with three default users and their workout data.
+Data is stored using localStorage to persist user workout history.
+Pagination is applied when the number of users exceeds five.
+The UI is designed with Tailwind CSS for modern styling.
 
 ## Usage
 
@@ -90,11 +109,27 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 - Use the search bar to find users by name.
 - Use the filter option to filter users by workout type.
 - Use pagination to navigate through the list if there are more than 5 users.
+- Navigate to workout progress page to view the workout progress of a user.
+- Use the side bar to find users by name to check the weekly pogress.
 
-## Additional Information
+## 💡 Learnings
+During this project, I learned:
 
-Author: Anurag Kumar Bharti<br />
-License: This project is licensed under the MIT License. See the LICENSE file for details.<br />
-Contact: anuragbhartiee25@gmail.com
+✅ Efficient State Management using localStorage
+✅ Building Reusable Components in Angular
+✅ Search & Filter Implementation with Angular Pipes
+✅ Unit Testing with Jasmine & Karma
+✅ Data Visualization using Charts.js
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+## ✨ About Me
+
+👤 Anurag Kumar Bharti
+📱 anuragbhartiee25@gmail.com
+🌎 https://ace-akb.vercel.app/
+🎓 Final-year Electrical Engineering Undergraduate, NIT Patna
+🚀 Passionate about Frontend Development, UI/UX, and Web Technologies
+🔗 GitHub: i-akb25
+
+## 📜 License
+This project is open-source and developed for the Fyle Frontend Development Challenge.
+

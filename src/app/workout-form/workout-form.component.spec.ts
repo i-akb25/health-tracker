@@ -12,8 +12,7 @@ describe('WorkoutFormComponent', () => {
     const routerSpy = jasmine.createSpyObj('Router', ['navigate']);
 
     await TestBed.configureTestingModule({
-      imports: [FormsModule],
-      declarations: [WorkoutFormComponent],
+      imports: [FormsModule, WorkoutFormComponent],
       providers: [{ provide: Router, useValue: routerSpy }]
     }).compileComponents();
 

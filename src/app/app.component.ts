@@ -11,4 +11,5 @@ import { RouterOutlet } from '@angular/router';
 })
 
 export class AppComponent {
+  title = 'health-tracker'; // Add title property
 }

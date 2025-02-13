@@ -2,34 +2,29 @@
 <header class="bg-black text-white p-4 shadow-md font-serif">
   <div class="max-w-7xl mx-auto flex justify-between items-center">
     <legend class="text-2xl font-medium text-center w-full md:w-auto">
-      Health Tracker
+      {{ title }}
+
     </legend>
     <nav>
       <ul class="hidden md:flex space-x-10 text-base">
-        <li><a href="#" class="hover:underline">Home</a></li>
-        <li><a href="#" class="hover:underline">Workout List</a></li>
-        <li><a href="#" class="hover:underline">Progress</a></li>
+        <li><a href="/workout-form" class="hover:underline">Home</a></li>
+        <li><a href="/workout-list" class="hover:underline">Workout List</a></li>
+        <li><a href="/workout-progress" class="hover:underline">Progress</a></li>
       </ul>
     </nav>
   </div>
   <div class="text-nowrap md:hidden mt-4 flex justify-center space-x-6 px-4">
     <ul class="flex space-x-10">
       <li>
-        <a routerLink="/workout-form" class="block text-base hover:underline"
-          >Home</a
-        >
+        <a routerLink="/workout-form" class="block text-base hover:underline">Home</a>
       </li>
       <li>
-        <a
-          routerLink="/workout-list"
-          class="block text-base hover:underline"
-          onclick="return false;"
-          >Workout List</a
-        >
+        <a routerLink="/workout-list" class="block text-base hover:underline" onclick="return false;">Workout List</a>
       </li>
       <li>
-        <a routerLink="" class="block text-base hover:underline">Progress</a>
+        <a routerLink="/workout-progress" class="block text-base hover:underline">Progress</a>
       </li>
+
     </ul>
   </div>
 </header>

@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
-import { FormsModule, NgForm } from '@angular/forms';
-import { WorkoutListComponent } from '../workout-list/workout-list.component';
+import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-workout-form',
   standalone: true,
-  imports: [RouterOutlet, FormsModule],
+  imports: [FormsModule],  
   templateUrl: './workout-form.component.html',
   styleUrls: ['./workout-form.component.css']
-})export class WorkoutFormComponent {
+})
+export class WorkoutFormComponent {
   workout = {
     username: '',
     workoutType: 'Cycling',
