@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 export class WorkoutFormComponent {
   workout = {
     username: '',
-    workoutType: 'Cycling',
+    workoutType: '', 
     workoutMinutes: null as number | null
   };
 
@@ -20,9 +20,20 @@ export class WorkoutFormComponent {
 
   onSubmit(form: any) {
     if (form.valid) {
-      const workouts = JSON.parse(localStorage.getItem('workouts') || '[]');
+      if (!this.workout.username || !this.workout.workoutType || !this.workout.workoutMinutes) {
+        return;
+      }
+      
+      const existingWorkouts = localStorage.getItem('workouts');
+      const workouts = existingWorkouts ? JSON.parse(existingWorkouts) : [];
+      
+
       workouts.push(this.workout);
+      
+
       localStorage.setItem('workouts', JSON.stringify(workouts));
+      
+
       this.router.navigate(['/workout-list']);
     }
   }

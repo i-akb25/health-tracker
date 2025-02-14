@@ -34,23 +34,44 @@ describe('WorkoutFormComponent', () => {
   });
 
   it('form should be valid when all fields are filled', () => {
-    component.workout.username = 'Test User';
-    component.workout.workoutType = 'Running';
-    component.workout.workoutMinutes = 30;
+    const form = fixture.nativeElement.querySelector('form');
+    const usernameInput = form.querySelector('input[name="username"]');
+    const workoutTypeSelect = form.querySelector('select[name="workoutType"]');
+    const workoutMinutesInput = form.querySelector('input[name="workoutMinutes"]');
+    
+    usernameInput.value = 'Test User';
+    usernameInput.dispatchEvent(new Event('input'));
+    
+    workoutTypeSelect.value = 'Running';
+    workoutTypeSelect.dispatchEvent(new Event('change'));
+    
+    workoutMinutesInput.value = '30';
+    workoutMinutesInput.dispatchEvent(new Event('input'));
+    
     fixture.detectChanges();
-    expect(fixture.nativeElement.querySelector('form').checkValidity()).toBeTrue();
+    expect(form.checkValidity()).toBeTrue();
   });
 
   it('should store workout in localStorage and navigate to workout list on form submit', () => {
     spyOn(localStorage, 'setItem').and.callThrough();
     spyOn(localStorage, 'getItem').and.returnValue('[]');
 
-    component.workout.username = 'Test User';
-    component.workout.workoutType = 'Running';
-    component.workout.workoutMinutes = 30;
-
+    const form = fixture.nativeElement.querySelector('form');
+    const usernameInput = form.querySelector('input[name="username"]');
+    const workoutTypeSelect = form.querySelector('select[name="workoutType"]');
+    const workoutMinutesInput = form.querySelector('input[name="workoutMinutes"]');
+    
+    usernameInput.value = 'Test User';
+    usernameInput.dispatchEvent(new Event('input'));
+    
+    workoutTypeSelect.value = 'Running';
+    workoutTypeSelect.dispatchEvent(new Event('change'));
+    
+    workoutMinutesInput.value = '30';
+    workoutMinutesInput.dispatchEvent(new Event('input'));
+    
     fixture.detectChanges();
-    fixture.nativeElement.querySelector('form').dispatchEvent(new Event('submit'));
+    form.dispatchEvent(new Event('submit'));
 
     expect(localStorage.getItem).toHaveBeenCalledWith('workouts');
     expect(localStorage.setItem).toHaveBeenCalledWith('workouts', jasmine.any(String));
